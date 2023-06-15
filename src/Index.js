@@ -2,6 +2,7 @@ import React from 'react';
 import App from './App';
 import Dashboard from './Dashboard';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { loginContext } from './context/loginContext';
 
 function Index() {
   const router = createBrowserRouter([
@@ -15,11 +16,11 @@ function Index() {
     },
   ]);
   return (
-    // <LoginContext.Provider
-    //   value={(firstName, lastName, setFirstname, setLastname)}
-    // >
+    <loginContext.Provider
+      value={{ firstName, lastName, setFirstname, setLastname }}
+    >
       <RouterProvider router={router} />
-    // </LoginContext.Provider>
+    </loginContext.Provider>
   );
 }
 export default Index;

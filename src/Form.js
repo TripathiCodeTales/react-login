@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function Form() {
   const options = ['+91', '+7', '+93'];
+  const [firstName, setFirstName]
   function handleOnClick() {
     {
       // (e) => (e.target.value);
@@ -10,7 +11,13 @@ export default function Form() {
 
   return (
     <div>
-      <input type="text" name="name" id="firstName" placeholder="FirstName*" />
+      <input
+        type="text"
+        name="name"
+        id="firstName"
+        placeholder="FirstName*"
+        onChange={hanleOnChange}
+      />
       <input type="text" name="name" id="LastName" placeholder="LastName*" />
       <br />
       <input
